@@ -8,6 +8,12 @@
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 			"value": "iomegasqlserverv2.database.windows.net"
 		},
@@ -16,6 +22,12 @@
 		},
 		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
 			"value": ""
+		},
+		"AzureBlob1_properties_typeProperties_fileName": {
+			"value": "processed-data.csv"
+		},
+		"AzureBlob1_properties_typeProperties_folderPath": {
+			"value": "data"
 		},
 		"containerUri": {
 			"value": ""
