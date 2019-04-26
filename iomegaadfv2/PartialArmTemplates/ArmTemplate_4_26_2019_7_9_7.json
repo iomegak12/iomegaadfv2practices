@@ -1,0 +1,60 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "iomegaadfv2"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline3')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "ML Batch Execution1",
+						"type": "AzureMLBatchExecution",
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"typeProperties": {
+							"webServiceInputs": {
+								"input1": {
+									"filePath": "data/sample-hw.csv",
+									"linkedServiceName": {
+										"referenceName": "AzureBlobStorage2",
+										"type": "LinkedServiceReference"
+									}
+								}
+							},
+							"webServiceOutputs": {
+								"output1": {
+									"filePath": "/data/outputs.csv",
+									"linkedServiceName": {
+										"referenceName": "AzureBlobStorage5",
+										"type": "LinkedServiceReference"
+									}
+								}
+							}
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureML1",
+							"type": "LinkedServiceReference"
+						}
+					}
+				]
+			}
+		}
+	]
+}

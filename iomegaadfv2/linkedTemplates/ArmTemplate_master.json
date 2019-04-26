@@ -47,6 +47,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
+		"AzureBlobStorage5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage5'"
+		},
 		"AzureBlob1_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": "processed-data.csv"
@@ -156,8 +160,8 @@
 					"AzureSqlDatabase3_connectionString": {
 						"value": "[parameters('AzureSqlDatabase3_connectionString')]"
 					},
-					"SqlServer1_connectionString": {
-						"value": "[parameters('SqlServer1_connectionString')]"
+					"AzureBlobStorage5_connectionString": {
+						"value": "[parameters('AzureBlobStorage5_connectionString')]"
 					},
 					"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri')]"
@@ -218,6 +222,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
 					}
 				}
 			},

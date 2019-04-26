@@ -35,6 +35,9 @@
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage5_connectionString": {
+			"value": ""
+		},
 		"AzureBlob1_properties_typeProperties_fileName": {
 			"value": "processed-data.csv"
 		},
