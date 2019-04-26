@@ -59,7 +59,13 @@
 					"sink": {
 						"type": "AzureDataLakeStoreSink"
 					},
-					"enableStaging": false
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						}
+					}
 				},
 				"inputs": [
 					{
