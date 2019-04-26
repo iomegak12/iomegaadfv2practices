@@ -378,9 +378,16 @@
 								"type": "SqlSource"
 							},
 							"sink": {
-								"type": "AzureDataLakeStoreSink"
+								"type": "AzureDataLakeStoreSink",
+								"copyBehavior": "MergeFiles"
 							},
-							"enableStaging": false
+							"enableStaging": true,
+							"stagingSettings": {
+								"linkedServiceName": {
+									"referenceName": "AzureBlobStorage1",
+									"type": "LinkedServiceReference"
+								}
+							}
 						},
 						"inputs": [
 							{
@@ -403,7 +410,8 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SqlServerTable1')]",
 				"[concat(variables('factoryId'), '/datasets/AzureBlob1')]",
-				"[concat(variables('factoryId'), '/datasets/AzureDataLakeStoreFile1')]"
+				"[concat(variables('factoryId'), '/datasets/AzureDataLakeStoreFile1')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
 			]
 		}
 	]
