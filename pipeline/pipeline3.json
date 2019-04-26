@@ -5,14 +5,6 @@
 			{
 				"name": "ML Batch Execution1",
 				"type": "AzureMLBatchExecution",
-				"dependsOn": [
-					{
-						"activity": "Lookup1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -43,26 +35,6 @@
 				"linkedServiceName": {
 					"referenceName": "AzureML1",
 					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Lookup1",
-				"type": "Lookup",
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"typeProperties": {
-					"source": {
-						"type": "SqlSource"
-					},
-					"dataset": {
-						"referenceName": "hwtable",
-						"type": "DatasetReference"
-					}
 				}
 			}
 		]
