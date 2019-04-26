@@ -17,6 +17,9 @@
 		"AzureDataLakeStore1_servicePrincipalKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
 		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 			"value": "iomegasqlserverv2.database.windows.net"
 		},
@@ -52,6 +55,12 @@
 		},
 		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 			"value": "iomegaresourcegroup"
+		},
+		"AzureBlob2_properties_typeProperties_fileName": {
+			"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		},
+		"AzureBlob2_properties_typeProperties_folderPath": {
+			"value": "data"
 		},
 		"containerUri": {
 			"value": ""
