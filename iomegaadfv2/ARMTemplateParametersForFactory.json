@@ -5,34 +5,46 @@
 		"factoryName": {
 			"value": "iomegaadfv2"
 		},
-		"AzureSqlDatabase1_connectionString": {
-			"value": ""
-		},
-		"SqlServer1_connectionString": {
-			"value": ""
-		},
 		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage4_connectionString": {
 			"value": ""
 		},
 		"AzureDataLakeStore1_servicePrincipalKey": {
 			"value": ""
 		},
+		"AzureML1_apiKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase2_connectionString": {
 			"value": ""
 		},
-		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
-			"value": "iomegasqlserverv2.database.windows.net"
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
 		},
-		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
-			"value": "iomegaadmin"
-		},
-		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+		"SqlServer1_connectionString": {
 			"value": ""
 		},
 		"AzureBlob1_properties_typeProperties_fileName": {
 			"value": "processed-data.csv"
 		},
 		"AzureBlob1_properties_typeProperties_folderPath": {
+			"value": "data"
+		},
+		"AzureBlob2_properties_typeProperties_fileName": {
+			"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		},
+		"AzureBlob2_properties_typeProperties_folderPath": {
 			"value": "data"
 		},
 		"AzureDataLakeStoreFile1_properties_typeProperties_fileName": {
@@ -56,11 +68,14 @@
 		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 			"value": "iomegaresourcegroup"
 		},
-		"AzureBlob2_properties_typeProperties_fileName": {
-			"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "iomegasqlserverv2.database.windows.net"
 		},
-		"AzureBlob2_properties_typeProperties_folderPath": {
-			"value": "data"
+		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "iomegaadmin"
+		},
+		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
 		}
 	}
 }

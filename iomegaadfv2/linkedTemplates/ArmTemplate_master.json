@@ -7,42 +7,59 @@
 			"metadata": "Data Factory Name",
 			"defaultValue": "iomegaadfv2"
 		},
-		"AzureSqlDatabase1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
-		},
-		"SqlServer1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
-		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureBlobStorage3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
+		"AzureBlobStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4'"
 		},
 		"AzureDataLakeStore1_servicePrincipalKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureDataLakeStore1'"
 		},
+		"AzureML1_apiKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'apiKey' of 'AzureML1'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
 		"AzureSqlDatabase2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
 		},
-		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
-			"type": "string",
-			"defaultValue": "iomegasqlserverv2.database.windows.net"
+		"AzureSqlDatabase3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase3'"
 		},
-		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
-			"type": "string",
-			"defaultValue": "iomegaadmin"
-		},
-		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
-			"type": "secureString"
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
 		"AzureBlob1_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": "processed-data.csv"
 		},
 		"AzureBlob1_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "data"
+		},
+		"AzureBlob2_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		},
+		"AzureBlob2_properties_typeProperties_folderPath": {
 			"type": "string",
 			"defaultValue": "data"
 		},
@@ -74,13 +91,16 @@
 			"type": "string",
 			"defaultValue": "iomegaresourcegroup"
 		},
-		"AzureBlob2_properties_typeProperties_fileName": {
+		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 			"type": "string",
-			"defaultValue": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+			"defaultValue": "iomegasqlserverv2.database.windows.net"
 		},
-		"AzureBlob2_properties_typeProperties_folderPath": {
+		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
 			"type": "string",
-			"defaultValue": "data"
+			"defaultValue": "iomegaadmin"
+		},
+		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
 		},
 		"containerUri": {
 			"type": "string",
@@ -109,29 +129,35 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureSqlDatabase1_connectionString": {
-						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
-					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureBlobStorage3_connectionString": {
+						"value": "[parameters('AzureBlobStorage3_connectionString')]"
+					},
+					"AzureBlobStorage4_connectionString": {
+						"value": "[parameters('AzureBlobStorage4_connectionString')]"
 					},
 					"AzureDataLakeStore1_servicePrincipalKey": {
 						"value": "[parameters('AzureDataLakeStore1_servicePrincipalKey')]"
 					},
+					"AzureML1_apiKey": {
+						"value": "[parameters('AzureML1_apiKey')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
 					"AzureSqlDatabase2_connectionString": {
 						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
 					},
+					"AzureSqlDatabase3_connectionString": {
+						"value": "[parameters('AzureSqlDatabase3_connectionString')]"
+					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
-					},
-					"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
-						"value": "[parameters('ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
-					},
-					"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
-						"value": "[parameters('ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
-					},
-					"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
-						"value": "[parameters('ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
 					},
 					"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri')]"
@@ -148,27 +174,56 @@
 					"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_resourceGroupName')]"
 					},
+					"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					},
 					"AzureBlob1_properties_typeProperties_fileName": {
 						"value": "[parameters('AzureBlob1_properties_typeProperties_fileName')]"
 					},
 					"AzureBlob1_properties_typeProperties_folderPath": {
 						"value": "[parameters('AzureBlob1_properties_typeProperties_folderPath')]"
 					},
-					"AzureDataLakeStoreFile1_properties_typeProperties_fileName": {
-						"value": "[parameters('AzureDataLakeStoreFile1_properties_typeProperties_fileName')]"
-					},
-					"AzureDataLakeStoreFile1_properties_typeProperties_folderPath": {
-						"value": "[parameters('AzureDataLakeStoreFile1_properties_typeProperties_folderPath')]"
-					},
 					"AzureBlob2_properties_typeProperties_fileName": {
 						"value": "[parameters('AzureBlob2_properties_typeProperties_fileName')]"
 					},
 					"AzureBlob2_properties_typeProperties_folderPath": {
 						"value": "[parameters('AzureBlob2_properties_typeProperties_folderPath')]"
+					},
+					"AzureDataLakeStoreFile1_properties_typeProperties_fileName": {
+						"value": "[parameters('AzureDataLakeStoreFile1_properties_typeProperties_fileName')]"
+					},
+					"AzureDataLakeStoreFile1_properties_typeProperties_folderPath": {
+						"value": "[parameters('AzureDataLakeStoreFile1_properties_typeProperties_folderPath')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_0')]"
+			]
 		}
 	]
 }
