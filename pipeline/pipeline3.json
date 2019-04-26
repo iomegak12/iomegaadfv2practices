@@ -21,6 +21,15 @@
 								"type": "LinkedServiceReference"
 							}
 						}
+					},
+					"webServiceOutputs": {
+						"output1": {
+							"filePath": "/data/outputs.csv",
+							"linkedServiceName": {
+								"referenceName": "AzureBlobStorage5",
+								"type": "LinkedServiceReference"
+							}
+						}
 					}
 				},
 				"linkedServiceName": {
