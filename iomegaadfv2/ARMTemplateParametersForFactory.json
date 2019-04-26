@@ -14,6 +14,9 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"AzureDataLakeStore1_servicePrincipalKey": {
+			"value": ""
+		},
 		"ADFv2LabISRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 			"value": "iomegasqlserverv2.database.windows.net"
 		},
@@ -28,6 +31,27 @@
 		},
 		"AzureBlob1_properties_typeProperties_folderPath": {
 			"value": "data"
+		},
+		"AzureDataLakeStoreFile1_properties_typeProperties_fileName": {
+			"value": "data.csv"
+		},
+		"AzureDataLakeStoreFile1_properties_typeProperties_folderPath": {
+			"value": "dbdata"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://iomegadlsv1.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_servicePrincipalId": {
+			"value": "31972633-9295-4f19-996e-747439893781"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "381a10df-8e85-43db-86e1-8893b075b027"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "7293f3cb-5705-4319-a0cc-15472af46eed"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "iomegaresourcegroup"
 		}
 	}
 }
