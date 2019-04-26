@@ -21,15 +21,6 @@
 								"type": "LinkedServiceReference"
 							}
 						}
-					},
-					"webServiceOutputs": {
-						"output1": {
-							"filePath": "",
-							"linkedServiceName": {
-								"referenceName": "AzureBlobStorage3",
-								"type": "LinkedServiceReference"
-							}
-						}
 					}
 				},
 				"linkedServiceName": {
